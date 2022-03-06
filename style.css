@@ -1,0 +1,192 @@
+@keyframes scaleAnimation {
+    50% {
+        transform: scale(1.5);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: #000000;
+}
+
+.background-image {
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    background-image: url("assets/img/lemonade.png");
+    background-repeat: no-repeat;
+    background-size: 100% 100vh;
+    filter: blur(10px);
+}
+.container {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    width: 340px;
+    height: 400px;
+    top: 0;
+    right: 0;
+    bottom: 20%;
+    left: 0;
+    margin: auto;
+    background-size: cover;
+    border-radius: 10px;
+    box-shadow: 0px 0px 14px 0px rgba(0, 0, 0, 0.8);
+    overflow: hidden;
+}
+
+.img-singer-box {
+    height: 65%;
+    overflow: hidden;
+}
+
+.img-singer {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+}
+
+.img-singer.active {
+    animation: scaleAnimation 3s ease-in-out infinite;
+}
+
+.audio-player {
+    position: relative;
+    height: 35%;
+    width: 100%;
+    padding: 10px 30px 4px;
+    background: linear-gradient(90deg, rgba(60, 60, 60, 1) 0%, rgba(134, 134, 134, 1) 100%);
+    /* background: grey; */
+}
+
+.info-box {
+    display: flex;
+    width: 100%;
+    justify-content: flex-start;
+    margin-bottom: 20px;
+}
+.play {
+    background-image: url("assets/svg/play.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    margin-top: 8px;
+    width: 50px;
+    height: 50px;
+}
+
+.play.pause {
+    background-image: url("assets/svg/pause.png");
+}
+
+.play:hover,
+.bnt-forward-backward:hover {
+    cursor: pointer;
+    filter: brightness(70%);
+    transition: all 0.3s;
+}
+
+.song-info-box {
+    width: 200px;
+    padding: 10px 10px 0;
+}
+
+.artist {
+    color: rgb(193, 255, 6);
+    font-family: "Montserrat", sans-serif;
+    font-weight: 700;
+    font-size: 20px;
+}
+
+.title {
+    color: white;
+    font-family: "Montserrat", sans-serif;
+    font-size: 17px;
+}
+
+.forward-backward-box {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.bnt-forward-backward {
+    width: 30px;
+    height: 30px;
+}
+
+.range-box {
+    display: flex;
+    position: relative;
+    padding-top: 5px;
+}
+
+#progress-bar {
+    margin-left: 10px;
+    width: 264px;
+}
+
+input[type="range"] {
+    -webkit-appearance: none;
+    height: 7px;
+    background: rgba(255, 255, 255, 0.7);
+    border-radius: 5px;
+    background-image: linear-gradient(rgb(193, 255, 6), rgb(193, 255, 6));
+    background-size: 0% 100%;
+    background-repeat: no-repeat;
+}
+
+.duration-time {
+    position: absolute;
+    cursor: pointer;
+    bottom: 70%;
+    right: 2%;
+    font-family: "Montserrat", sans-serif;
+    font-size: 13px;
+    color: rgb(193, 255, 6);
+}
+
+.current-time {
+    position: absolute;
+    cursor: pointer;
+    top: 16px;
+    left: 3%;
+    font-family: "Montserrat", sans-serif;
+    font-size: 13px;
+    color: white;
+    align-items: center;
+}
+
+footer {
+    display: flex;
+    position: absolute;
+    bottom: 0;
+    padding: 10px 20px;
+    justify-content: space-between;
+    align-items: center;
+    height: 80px;
+    width: 100%;
+    background-color: #000000;
+}
+
+footer span {
+    font-family: "Montserrat", Arial, sans-serif;
+    font-size: 26px;
+    font-weight: 700;
+    color: #ffffff;
+}
+
+.github-link img {
+    height: 60px;
+    width: auto;
+}
+.rss-logo img {
+    height: 60px;
+    width: auto;
+}

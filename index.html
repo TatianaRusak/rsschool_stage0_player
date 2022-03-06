@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet"> 
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="./assets/favicon.ico" type="image/x-icon">
+    <title>Audio Player</title>
+</head>
+<body>
+    <main>
+        <div class="background-image"></div>
+        <div class="container">
+            <div class="img-singer-box"><img class="img-singer" src="assets/img/lemonade.png"></div>
+            <div class="audio-player">
+                <div class="info-box">
+                    <div class="play" alt="play-pause"></div>
+                    <div class="song-info-box">
+                        <div class="artist"></div>
+                        <div class="title"></div>
+                    </div>
+                    <div class="forward-backward-box">
+                        <img class="bnt-forward-backward backward" src="assets/svg/backward.png" alt="previous">
+                        <img class="bnt-forward-backward forward" src="assets/svg/forward.png" alt="next">
+                    </div>
+                </div>
+                
+                <div class="range-box">
+                    <input id="progress-bar" type="range" min="0" max="100" value="0">
+                    <div class="duration-time"></div>
+                    <div class="current-time">0:00</div>
+                </div> 
+            </div>
+
+        </div>
+    </main>
+    
+    <footer>
+        <div><a href="https://github.com/tatianarusak" class="github-link"><img src="assets/svg/github-logo.png" alt="github"></a></div>
+        <span>2022</span>
+        <div class="rss-logo"><a href="https://rs.school/js/"><img src="assets/svg/rs_school.svg" alt="rs_school"></a></div>
+    </footer>
+    <script src="index.js"></script>
+</body>
+</html>
